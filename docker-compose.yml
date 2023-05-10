@@ -3,10 +3,10 @@ version: '3.3'
 networks:
   films:
     external:
-      name:
+      name: filmspersons_default
   actors:
     external:
-      name:
+      name: filmspersons_default
 
 
 services:
