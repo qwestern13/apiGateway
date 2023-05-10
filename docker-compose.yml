@@ -1,0 +1,22 @@
+version: '3.3'
+
+networks:
+  films:
+    external:
+      name:
+  actors:
+    external:
+      name:
+
+
+services:
+  nginx:
+    build: .
+    container_name: apigateway
+    hostname: apigateway
+    image: apigateway
+    ports:
+      - 3001:80
+    networks:
+      - films
+      - actors
