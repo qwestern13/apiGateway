@@ -1,12 +1,10 @@
 version: '3.3'
 
 networks:
-  films:
+  film:
     external:
       name: filmspersons_default
-  actors:
-    external:
-      name: filmspersons_default
+
 
 
 services:
@@ -16,7 +14,6 @@ services:
     hostname: apigateway
     image: apigateway
     ports:
-      - 3001:80
+      - 80:80
     networks:
-      - films
-      - actors
+      - film
